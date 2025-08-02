@@ -5,109 +5,132 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Victoria Dinov</title>
   <style>
+    /* Reset & basics */
+    * {
+      box-sizing: border-box;
+    }
     body {
-      font-family: 'Helvetica Neue', sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      color: #222;
+      background-color: #fff;
+      margin: 0;
+      padding: 40px 20px;
       max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
-      color: #333;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.5;
     }
 
-    /* Top navigation bar aligned right */
+    /* Navigation bar */
     nav {
       display: flex;
       justify-content: flex-end;
       gap: 24px;
-      margin-bottom: 40px;
-      font-weight: bold;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #007acc;
+      margin-bottom: 50px;
+      font-weight: 600;
       font-size: 1rem;
-      padding-bottom: 4px;
+    }
+    nav a {
+      color: #007acc;
+      text-decoration: none;
       border-bottom: 2px solid transparent;
-      transition: border-color 0.3s;
+      padding-bottom: 3px;
+      transition: border-color 0.3s ease;
     }
-
     nav a:hover {
-      border-bottom-color: #007acc;
+      border-color: #007acc;
     }
 
-    /* Main container for left photo + right summary */
-    .main-container {
+    /* Main flex container */
+    .main {
       display: flex;
-      gap: 40px;
+      gap: 50px;
       align-items: flex-start;
     }
 
-    /* Left column: image + summary */
-    .left-column {
-      max-width: 220px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
+    /* Profile image */
     .profile-pic-container {
-      width: 200px;
-      height: 200px;
-      margin-bottom: 20px;
+      flex-shrink: 0;
+      width: 220px;
+      height: 220px;
       overflow: hidden;
-      border-radius: 0; /* No rounding, square */
+      border-radius: 8px; /* Slightly rounded corners like rush-nlp */
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
     }
-
     .profile-pic-container img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      border-radius: 0; /* No rounding */
       display: block;
+      border-radius: 8px;
     }
 
-    .summary {
-      font-size: 1rem;
-      text-align: center;
-      line-height: 1.4;
-      color: #555;
-    }
-
-    /* Right column: name + info */
-    .right-column {
+    /* Right content */
+    .content {
       flex: 1;
-      font-size: 1.1rem;
-      line-height: 1.6;
     }
 
-    .right-column h1 {
-      margin: 0 0 12px 0;
+    .content h1 {
       font-weight: 900;
-      font-size: 2rem;
+      font-size: 2.8rem;
+      margin: 0 0 12px 0;
       color: #111;
     }
 
     .info-list {
       list-style: none;
+      margin: 0 0 30px 0;
       padding: 0;
-      margin: 0;
-      color: #444;
       font-weight: 500;
+      color: #555;
+      font-size: 1.1rem;
+      line-height: 1.4;
     }
-
     .info-list li {
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
-
-    /* Link styling inside info list */
     .info-list a {
       color: #007acc;
       text-decoration: none;
-      font-weight: 600;
     }
-
     .info-list a:hover {
       text-decoration: underline;
+    }
+
+    /* Summary paragraph */
+    .summary {
+      font-size: 1.15rem;
+      max-width: 600px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Responsive */
+    @media (max-width: 720px) {
+      .main {
+        flex-direction: column;
+        align-items: center;
+      }
+      .profile-pic-container {
+        width: 180px;
+        height: 180px;
+        margin-bottom: 25px;
+      }
+      .content h1 {
+        font-size: 2.4rem;
+        text-align: center;
+      }
+      .info-list {
+        text-align: center;
+      }
+      .summary {
+        text-align: center;
+      }
+      nav {
+        justify-content: center;
+        margin-bottom: 30px;
+      }
     }
   </style>
 </head>
@@ -121,22 +144,11 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <div class="main-container">
-
-    <div class="left-column">
-      <div class="profile-pic-container">
-        <img src="Headshot2.0.JPG" alt="Photo of Victoria Dinov" />
-      </div>
-      <div class="summary">
-        Currently, I am a Stanford graduate student studying energy sciences and engineering. I am working on researching 
-        the planning processes for decarbonized, reliable, and resilient electricity systems. Specifically, I am focused on
-        developing energy optimization, resource adequacy, and transmission planning models that emphasize cost and resource
-        optimization while also promoting grid reliability and stability. These models can support policy analysis, capacity 
-        expansion and resource planning, and renewables integration.
-      </div>
+  <div class="main">
+    <div class="profile-pic-container">
+      <img src="Headshot2.0.JPG" alt="Photo of Victoria Dinov" />
     </div>
-
-    <div class="right-column">
+    <div class="content">
       <h1>Victoria Dinov</h1>
       <ul class="info-list">
         <li>Graduate Student</li>
@@ -146,12 +158,19 @@
         <li><a href="cv.html" target="_blank">CV</a></li>
         <li>Energy Enthusiast</li>
       </ul>
+      <p class="summary">
+        Currently, I am a Stanford graduate student studying energy sciences and engineering. I am working on researching 
+        the planning processes for decarbonized, reliable, and resilient electricity systems. Specifically, I am focused on
+        developing energy optimization, resource adequacy, and transmission planning models that emphasize cost and resource
+        optimization while also promoting grid reliability and stability. These models can support policy analysis, capacity 
+        expansion and resource planning, and renewables integration.
+      </p>
     </div>
-
   </div>
 
 </body>
 </html>
+
 
 
 
