@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CV</title>
+  <title>CV | Victoria Dinov</title>
   <style>
     body {
       font-family: 'Helvetica Neue', sans-serif;
@@ -14,50 +14,48 @@
       padding: 0 20px;
     }
 
-    nav {
+    header {
       display: flex;
-      justify-content: flex-end;
-      gap: 20px;
-      margin-bottom: 20px;
+      align-items: center;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .name {
+      font-weight: bold;
+      color: #333;
+      margin-right: 40px;
     }
 
     nav a {
+      margin-right: 20px;
       text-decoration: none;
+      color: #0066cc;
       font-weight: bold;
-      color: #007BFF; /* Blue color */
       font-family: 'Helvetica Neue', sans-serif;
     }
 
-    iframe {
-      width: 100%;
-      height: 100vh;
-      border: none;
+    nav {
+      display: flex;
+      align-items: center;
     }
   </style>
 </head>
 <body>
 
-  <nav>
-  <a href="index.html">Home</a>
-  <a href="cv.pdf" target="_blank">CV</a>
-  <a href="Research.html">Research</a>
-  <a href="personal-interests.html">Personal Interests</a>
-</nav>
-
-  <!-- Embedded PDF -->
-  <iframe src="Victoria Dinov_Website_CV.pdf"></iframe>
-
-  <footer>
-    <div class="social-icons">
-      <a href="https://www.linkedin.com/in/victoria-dinov-8272231a6/" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="mailto:vdinov@stanford.edu"><i class="fas fa-envelope"></i></a>
-      <a href="https://scholar.google.com/citations?user=4-LxwA0AAAAJ&hl=en"><i class="fas fa-graduation-cap"></i></a>
-      <a href="https://github.com/vickyd02" target="_blank"><i class="fab fa-github"></i></a>
-    </div>
-    <p style="margin-top: 10px; font-size: 0.9em;">© 2025 Victoria Dinov</p>
-  </footer>
+  <header>
+    <!-- Name starts aligned with nav -->
+    <div class="name">Victoria Dinov</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="cv.pdf" target="_blank">CV</a>
+      <a href="Research.html">Research</a>
+      <a href="personal-interests.html">Personal Interests</a>
+    </nav>
+  </header>
 
 </body>
 </html>
+
 
 
