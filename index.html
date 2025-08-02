@@ -2,68 +2,116 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Victoria Dinov</title>
   <style>
     body {
       font-family: 'Helvetica Neue', sans-serif;
-      background-color: #fff;
-      color: #333;
-      max-width: 800px;
-      margin: 60px auto;
+      max-width: 900px;
+      margin: 40px auto;
       padding: 20px;
-      line-height: 1.6;
+      color: #333;
     }
 
-    img {
-      width: 200px;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 50%;
-      display: block;
-      margin: 0 auto 20px auto;
-    }
-
-    h1 {
-      text-align: center;
-      font-size: 2em;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 1.1em;
-      text-align: justify;
-    }
-
+    /* Top navigation bar aligned right */
     nav {
-      text-align: center;
-      margin-top: 40px;
-    }
-
-    nav a {
-      margin: 0 12px;
-      text-decoration: none;
-      color: #007acc;
+      display: flex;
+      justify-content: flex-end;
+      gap: 24px;
+      margin-bottom: 40px;
       font-weight: bold;
     }
 
+    nav a {
+      text-decoration: none;
+      color: #007acc;
+      font-size: 1rem;
+      padding-bottom: 4px;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s;
+    }
+
     nav a:hover {
+      border-bottom-color: #007acc;
+    }
+
+    /* Main container for left photo + right summary */
+    .main-container {
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+    }
+
+    /* Left column: image + summary */
+    .left-column {
+      max-width: 220px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .profile-pic-container {
+      width: 200px;
+      height: 200px;
+      margin-bottom: 20px;
+      overflow: hidden;
+      border-radius: 0; /* No rounding, square */
+    }
+
+    .profile-pic-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 0; /* No rounding */
+      display: block;
+    }
+
+    .summary {
+      font-size: 1rem;
+      text-align: center;
+      line-height: 1.4;
+      color: #555;
+    }
+
+    /* Right column: name + info */
+    .right-column {
+      flex: 1;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .right-column h1 {
+      margin: 0 0 12px 0;
+      font-weight: 900;
+      font-size: 2rem;
+      color: #111;
+    }
+
+    .info-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      color: #444;
+      font-weight: 500;
+    }
+
+    .info-list li {
+      margin-bottom: 8px;
+    }
+
+    /* Link styling inside info list */
+    .info-list a {
+      color: #007acc;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .info-list a:hover {
       text-decoration: underline;
     }
   </style>
 </head>
 <body>
-
-  <img src="Headshot2.0.JPG" alt="Photo of Victoria Dinov">
-  <h1>Victoria Dinov</h1>
-
-  <p>
-    Currently, I am a Stanford graduate student studying energy sciences and engineering. I am working on researching 
-    the planning processes for decarbonized, reliable, and resilient electricity systems. Specifically, I am focused on
-    developing energy optimization, resource adequacy, and transmission planning models that emphasize cost and resource
-    optimization while also promoting grid reliability and stability. These models can support policy analysis, capacity 
-    expansion and resource planning, and renewables integration.
-  </p>
 
   <nav>
     <a href="publications.html">Publications</a>
@@ -73,7 +121,37 @@
     <a href="contact.html">Contact</a>
   </nav>
 
+  <div class="main-container">
+
+    <div class="left-column">
+      <div class="profile-pic-container">
+        <img src="Headshot2.0.JPG" alt="Photo of Victoria Dinov" />
+      </div>
+      <div class="summary">
+        Currently, I am a Stanford graduate student studying energy sciences and engineering. I am working on researching 
+        the planning processes for decarbonized, reliable, and resilient electricity systems. Specifically, I am focused on
+        developing energy optimization, resource adequacy, and transmission planning models that emphasize cost and resource
+        optimization while also promoting grid reliability and stability. These models can support policy analysis, capacity 
+        expansion and resource planning, and renewables integration.
+      </div>
+    </div>
+
+    <div class="right-column">
+      <h1>Victoria Dinov</h1>
+      <ul class="info-list">
+        <li>Graduate Student</li>
+        <li>Stanford University</li>
+        <li>Energy Sciences and Engineering</li>
+        <li><a href="mailto:vdinov@stanford.edu">vdinov@stanford.edu</a></li>
+        <li><a href="cv.html" target="_blank">CV</a></li>
+        <li>Energy Enthusiast</li>
+      </ul>
+    </div>
+
+  </div>
+
 </body>
 </html>
+
 
 
