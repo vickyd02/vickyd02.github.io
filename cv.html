@@ -24,9 +24,11 @@
       margin-bottom: 40px;
     }
 
-    .name {
+    .name a {
       font-weight: bold;
       font-size: 20px;
+      text-decoration: none;
+      color: #000;
     }
 
     nav a {
@@ -34,7 +36,6 @@
       text-decoration: none;
       color: #007bff;
       font-weight: bold;
-      font-family: 'Helvetica Neue', sans-serif;
     }
 
     .cv-link {
@@ -65,13 +66,13 @@
     }
 
     .social-icons a:hover {
-      color: #0056b3; /* Darker blue on hover */
+      color: #0056b3;
     }
   </style>
 </head>
-<body>
+<body onload="openPDF()">
   <header>
-    <div class="name">Victoria Dinov</div>
+    <div class="name"><a href="index.html">Victoria Dinov</a></div>
     <nav>
       <a href="cv.html">CV</a>
       <a href="Research.html">Research</a>
@@ -92,8 +93,15 @@
     </div>
     <p style="margin-top: 10px; font-size: 0.9em;">© 2025 Victoria Dinov</p>
   </footer>
+
+  <script>
+    function openPDF() {
+      window.open("Victoria Dinov_Website_CV.pdf", "_blank");
+    }
+  </script>
 </body>
 </html>
+
 
 
 
