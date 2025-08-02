@@ -2,10 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Publications - Victoria Dinov</title>
-  <link rel="stylesheet" href="style.css" />
   <style>
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #fff;
+      color: #333;
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    header {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #007acc;
+      font-weight: bold;
+      font-size: 1em;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      margin-top: 40px;
+    }
+
+    h2 {
+      font-size: 1.8em;
+      margin-bottom: 30px;
+    }
+
     .publication {
       display: flex;
       align-items: flex-start;
@@ -18,74 +55,58 @@
       height: 100px;
       object-fit: cover;
       border-radius: 8px;
+      flex-shrink: 0;
+    }
+
+    .pub-details {
+      flex: 1;
     }
 
     .pub-details a {
       color: #007acc;
       font-weight: bold;
       text-decoration: none;
+      font-size: 1.1em;
       display: block;
+      margin-bottom: 4px;
     }
 
     .pub-details a:hover {
       text-decoration: underline;
     }
 
-    .pub-details .authors {
-      margin: 5px 0;
+    .publication-title {
       font-style: italic;
+      font-size: 0.95em;
+      margin: 2px 0;
     }
 
-    .pub-details .year {
-      color: gray;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-bottom: 10px;
-      border-bottom: 1px solid #ccc;
-    }
-    body {
-      font-family: 'Helvetica Neue', sans-serif;
-      background-color: #fff;
-      color: #333;
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-
-    nav a {
-      margin-left: 15px;
-      text-decoration: none;
-      color: #000;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
+    .author, .year {
+      font-size: 0.9em;
+      color: #666;
+      margin: 2px 0;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1><a href="index.html" style="text-decoration:none; color:black">Victoria Dinov</a></h1>
     <nav>
       <a href="index.html">Home</a>
       <a href="cv.html">CV</a>
-      <a href="Research.html">Research</a>
-      <a href="personal interests.html">Personal Interests</a>
+      <a href="research.html">Research</a>
+      <a href="personal-interests.html">Personal Interests</a>
     </nav>
   </header>
 
   <main>
     <h2>Publications</h2>
 
-        <div class="publication">
+    <div class="publication">
       <img src="thumbnail1.jpg" alt="Publication Thumbnail">
       <div class="pub-details">
-        <a href="https://www.law.berkeley.edu/wp-content/uploads/2021/11/Annual-Report-2021-1-1.pdf"> UC Berkeley Center on Comparative Equality and Anti-Discrimination Law Annual Report</a>
-        <div class="publication"> UC Berkeley Center on Comparative Equality and Anti-Discrimination Law </div>
+        <a href="https://www.law.berkeley.edu/wp-content/uploads/2021/11/Annual-Report-2021-1-1.pdf">UC Berkeley Center on Comparative Equality and Anti-Discrimination Law Annual Report</a>
+        <div class="publication-title">UC Berkeley Center on Comparative Equality and Anti-Discrimination Law</div>
         <div class="author">David Oppenheimer, Victoria Dinov et al.</div>
         <div class="year">2021</div>
       </div>
@@ -94,8 +115,8 @@
     <div class="publication">
       <img src="thumbnail1.jpg" alt="Publication Thumbnail">
       <div class="pub-details">
-        <a href="https://www.sandiegouniontribune.com/2020/06/04/guest-editorial-who-runs-the-world-voters/" target="_blank">Who runs the world? Voters</a>
-        <div class="publication">San Diego Union Tribune</div>
+        <a href="https://www.sandiegouniontribune.com/2020/06/04/guest-editorial-who-runs-the-world-voters/" target="_blank">Who Runs the World? Voters</a>
+        <div class="publication-title">San Diego Union Tribune</div>
         <div class="author">Victoria Dinov</div>
         <div class="year">2020</div>
       </div>
@@ -104,8 +125,8 @@
     <div class="publication">
       <img src="thumbnail1.jpg" alt="Publication Thumbnail">
       <div class="pub-details">
-        <a href="https://spectrumnews1.com/ca/southern-california/politics/2020/10/13/proposition-18-asks-voters-to-decide-if-some-17-year-olds-should-vote" target="_blank">Proposition 18 Asks Voters to Decide If Some 17-Year-Olds Should Vote</a>
-        <div class="publication">Spectrum News 1</div>
+        <a href="https://spectrumnews1.com/ca/southern-california/politics/2020/10/13/proposition-18-asks-voters-to-decide-if-some-17-year-olds-should-vote" target="_blank">Proposition 18: Should Some 17-Year-Olds Vote?</a>
+        <div class="publication-title">Spectrum News 1</div>
         <div class="author">Daniel Pardo</div>
         <div class="year">2020</div>
       </div>
@@ -115,7 +136,7 @@
       <img src="thumbnail1.jpg" alt="Publication Thumbnail">
       <div class="pub-details">
         <a href="https://sophzw.wixsite.com/website/post/protecting-old-friends">Protecting Old Friends</a>
-        <div class="publication">Project We</div>
+        <div class="publication-title">Project We</div>
         <div class="author">Victoria Dinov</div>
         <div class="year">2020</div>
       </div>
@@ -124,24 +145,15 @@
     <div class="publication">
       <img src="thumbnail1.jpg" alt="Publication Thumbnail">
       <div class="pub-details">
-        <a href="https://sophzw.wixsite.com/website/post/protecting-old-friends">Protecting Old Friends</a>
-        <div class="publication">Project We</div>
+        <a href="https://www.hercampus.com/school/uc-berkeley/wildfire-survivor-climate-activist-personal-narrative/">From Wildfire Survivor to Climate Activist</a>
+        <div class="publication-title">Her Campus</div>
         <div class="author">Victoria Dinov</div>
         <div class="year">2020</div>
       </div>
     </div>
-
-     <div class="publication">
-      <img src="thumbnail1.jpg" alt="Publication Thumbnail">
-      <div class="pub-details">
-        <a href="https://www.hercampus.com/school/uc-berkeley/wildfire-survivor-climate-activist-personal-narrative/">From Wilfire Survivor to Climate Activist: A Personal Narrative</a>
-        <div class="publication">Her Campus</div>
-        <div class="author">Victoria Dinov</div>
-        <div class="year">2020</div>
-      </div>
-    </div>
-
   </main>
+
 </body>
 </html>
+
 
