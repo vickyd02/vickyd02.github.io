@@ -4,23 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Victoria Dinov</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     body {
       font-family: 'Helvetica Neue', sans-serif;
       background-color: #fff;
       color: #333;
       max-width: 1000px;
-      margin: 0 auto;
-      padding: 40px 20px;
-      line-height: 1.6;
+      margin: 40px auto;
+      padding: 0 20px;
     }
 
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
-      margin-bottom: 20px;
+      padding-bottom: 10px;
     }
 
     nav a {
@@ -28,6 +27,7 @@
       text-decoration: none;
       color: #007acc;
       font-weight: bold;
+      font-size: 1em;
     }
 
     nav a:hover {
@@ -42,101 +42,88 @@
 
     .top-section {
       display: flex;
-      gap: 30px;
       align-items: flex-start;
-      margin-top: 40px;
+      gap: 20px;
+      margin-left: 40px;
     }
 
     .profile-pic {
-      width: 250px;
-      height: 250px;
+      width: 230px;
+      height: 230px;
       object-fit: cover;
       border-radius: 10px;
+      flex-shrink: 0;
     }
 
-    .summary {
+    .summary-text {
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
-      flex: 1;
+      align-items: center;
+      text-align: center;
+      font-size: 1em;
+      line-height: 1.3;
     }
 
-    .name-title {
-      font-weight: bold;
+    .summary-text b {
       font-size: 1.8em;
       margin-bottom: 10px;
     }
 
-    .details p {
-      margin: 2px 0;
-      line-height: 1.3;
-    }
-
-    .main-summary {
+    .bio {
       margin-top: 30px;
       font-size: 1.1em;
       text-align: justify;
     }
 
     footer {
-      margin-top: 40px;
-      padding-top: 10px;
       border-top: 1px solid #ccc;
+      margin-top: 40px;
+      padding-top: 20px;
       text-align: center;
-      font-size: 0.95em;
     }
 
-    .icons a {
+    .social-icons a {
       margin: 0 12px;
-      color: #333;
+      color: #007acc;
+      font-size: 1.3em;
       text-decoration: none;
     }
 
-    .icons a:hover {
-      color: #007acc;
-    }
-
-    .icons i {
-      font-size: 1.5em;
-      vertical-align: middle;
+    .social-icons a:hover {
+      color: #005f99;
     }
   </style>
-
-  <!-- Font Awesome for icons -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
+
   <header>
-    <div class="logo"></div>
+    <div></div>
     <nav>
       <a href="publications.html">Publications</a>
       <a href="cv.html">CV</a>
-      <a href="research.html">Research</a>
-      <a href="personal interests.html">Personal Interests</a>
+      <a href="certificates.html">Licenses/Certificates</a>
+      <a href="awards.html">Awards</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
   <hr />
 
   <section class="top-section">
-    <img class="profile-pic" src="Headshot2.0.JPG" alt="Victoria Dinov">
-    <div class="summary">
-      <div class="name-title">Victoria Dinov</div>
-      <div class="details">
-        <p>Graduate Student</p>
-        <p>Stanford University</p>
-        <p>Energy Sciences and Engineering</p>
-        <p>vdinov@stanford.edu</p>
-        <p><a href="cv.html" style="color:#007acc; text-decoration: none;">CV</a></p>
-        <p>Energy Enthusiast</p>
-      </div>
+    <img src="Headshot2.0.JPG" alt="Photo of Victoria Dinov" class="profile-pic" />
+    <div class="summary-text">
+      <b>Victoria Dinov</b>
+      Graduate Student  
+      <br>Stanford University  
+      <br>Energy Sciences and Engineering  
+      <br>vdinov@stanford.edu  
+      <br>Energy Enthusiast
     </div>
   </section>
 
-  <section class="main-summary">
+  <section class="bio">
     <p>
-      Currently, I am a Stanford graduate student studying energy sciences and engineering. I am working on researching 
+      Hi, my name is Victoria and I am currently a Stanford graduate student studying energy sciences and engineering. I am working on researching 
       the planning processes for decarbonized, reliable, and resilient electricity systems. Specifically, I am focused on
       developing energy optimization, resource adequacy, and transmission planning models that emphasize cost and resource
       optimization while also promoting grid reliability and stability. These models can support policy analysis, capacity 
@@ -144,7 +131,7 @@
     </p>
   </section>
 
-<footer>
+  <footer>
     <div class="social-icons">
       <a href="https://www.linkedin.com/in/victoria-dinov-8272231a6/" target="_blank"><i class="fab fa-linkedin"></i></a>
       <a href="mailto:vdinov@stanford.edu"><i class="fas fa-envelope"></i></a>
@@ -156,6 +143,7 @@
 
 </body>
 </html>
+
 
 
 
