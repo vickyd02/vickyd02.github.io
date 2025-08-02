@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>CV | Victoria Dinov</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <style>
     body {
       font-family: 'Helvetica Neue', sans-serif;
@@ -16,46 +17,85 @@
 
     header {
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      padding-bottom: 20px;
-      border-bottom: 1px solid #ccc;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 10px;
+      margin-bottom: 40px;
     }
 
     .name {
       font-weight: bold;
-      color: #333;
-      margin-right: 40px;
+      font-size: 20px;
     }
 
     nav a {
-      margin-right: 20px;
+      margin-left: 20px;
       text-decoration: none;
-      color: #0066cc;
+      color: #007bff;
       font-weight: bold;
       font-family: 'Helvetica Neue', sans-serif;
     }
 
-    nav {
-      display: flex;
-      align-items: center;
+    .cv-link {
+      text-align: center;
+      margin: 100px 0;
+      font-size: 20px;
+    }
+
+    .cv-link a {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 80px;
+      border-top: 1px solid #ccc;
+      padding-top: 20px;
+      color: #555;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      font-size: 20px;
+      color: #007bff; /* Changed from #555 to blue */
+      text-decoration: none;
+    }
+
+    .social-icons a:hover {
+      color: #0056b3; /* Darker blue on hover */
     }
   </style>
 </head>
 <body>
-
   <header>
-    <!-- Name starts aligned with nav -->
     <div class="name">Victoria Dinov</div>
     <nav>
       <a href="index.html">Home</a>
-      <a href="cv.pdf" target="_blank">CV</a>
+      <a href="cv.html">CV</a>
       <a href="Research.html">Research</a>
-      <a href="personal-interests.html">Personal Interests</a>
+      <a href="personal interests.html">Personal Interests</a>
     </nav>
   </header>
 
+  <div class="cv-link">
+    <p><a href="Victoria Dinov_Website_CV.pdf" target="_blank">Click here to view my full CV (PDF)</a></p>
+  </div>
+
+  <footer>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/victoria-dinov-8272231a6/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:vdinov@stanford.edu"><i class="fas fa-envelope"></i></a>
+      <a href="https://scholar.google.com/citations?user=4-LxwA0AAAAJ&hl=en"><i class="fas fa-graduation-cap"></i></a>
+      <a href="https://github.com/vickyd02" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+    <p style="margin-top: 10px; font-size: 0.9em;">© 2025 Victoria Dinov</p>
+  </footer>
 </body>
 </html>
+
 
 
 
