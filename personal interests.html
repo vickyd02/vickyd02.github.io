@@ -48,6 +48,56 @@
       margin: 20px 0;
     }
 
+    h2 {
+      font-size: 1.5em;
+      margin-top: 40px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 5px;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    .carousel-container {
+      position: relative;
+      max-width: 100%;
+      margin-top: 10px;
+      margin-bottom: 30px;
+    }
+
+    .carousel-slide {
+      display: none;
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .carousel-slide.active {
+      display: block;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2em;
+      color: #007acc;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 50%;
+      padding: 5px 10px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .arrow.left {
+      left: 10px;
+    }
+
+    .arrow.right {
+      right: 10px;
+    }
+
     section {
       margin: 40px 0;
     }
@@ -119,6 +169,13 @@
         my Spanish language skills and had an opportunity to work for nonprofits in the region. I have goals to continue to 
         travel through Latin America and visit Southeast Asia and East Africa!
       </p>
+      <div class="carousel-container" id="climbing-carousel">
+        <img src="climb1.jpg" class="carousel-slide active" />
+        <img src="climb2.jpg" class="carousel-slide" />
+        <img src="climb3.jpg" class="carousel-slide" />
+        <span class="arrow left" onclick="changeSlide('climbing-carousel', -1)">&#10094;</span>
+        <span class="arrow right" onclick="changeSlide('climbing-carousel', 1)">&#10095;</span>
+      </div>
     </div>
 
     <div class="interest-block">
@@ -129,12 +186,28 @@
         I have climbed mainly in the Eastern Sierras and Shenandoah area. I am excited to keep exploring my climbing and backpacking skills
         and getting more into mountaineering!
       </p>
+      <div class="carousel-container" id="climbing-carousel">
+        <img src="climb1.jpg" class="carousel-slide active" />
+        <img src="climb2.jpg" class="carousel-slide" />
+        <img src="climb3.jpg" class="carousel-slide" />
+        <span class="arrow left" onclick="changeSlide('climbing-carousel', -1)">&#10094;</span>
+        <span class="arrow right" onclick="changeSlide('climbing-carousel', 1)">&#10095;</span>
+      </div>
     </div>
 
     <div class="interest-block">
       <h3>Running</h3>
       <p>
-        I have been a runner from a young age. It has been a very important part of my life and has led me to running half and full marathons, Boston qualifying during my first marathon. I am excited to see where my running takes me as I expand to ultra and trail running!
+        I have been a runner from a young age. It has been a very important part of my life and has led me to running half and full marathons, Boston qualifying during my first marathon. 
+        I am excited to see where my running takes me as I expand to ultra and trail running!
+      </p>
+      <div class="carousel-container" id="climbing-carousel">
+        <img src="climb1.jpg" class="carousel-slide active" />
+        <img src="climb2.jpg" class="carousel-slide" />
+        <img src="climb3.jpg" class="carousel-slide" />
+        <span class="arrow left" onclick="changeSlide('climbing-carousel', -1)">&#10094;</span>
+        <span class="arrow right" onclick="changeSlide('climbing-carousel', 1)">&#10095;</span>
+      </div>
     </div>
 
     <div class="interest-block">
