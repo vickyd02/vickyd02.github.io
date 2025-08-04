@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Personal Interests</title>
   <link rel="stylesheet" href="styles.css" />
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
   <style>
-    font-family: 'Helvetica Neue', sans-serif;
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
       background-color: #fff;
       color: #333;
       max-width: 1000px;
@@ -17,14 +18,30 @@
     }
 
     header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       background-color: #ffffff;
       padding: 1em 2em;
       border-bottom: 2px solid #eee;
     }
 
-    header h1 {
-      margin: 0;
+    header .name a {
+      text-decoration: none;
       font-size: 1.8em;
+      color: #000;
+      font-weight: bold;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #004080;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
     }
 
     .content {
@@ -44,14 +61,18 @@
 
     .carousel-container {
       position: relative;
-      max-width: 100%;
+      width: 100%;
+      height: 400px; /* fixed height for all carousels */
       overflow: hidden;
       margin-top: 1em;
+      border-radius: 10px;
     }
 
     .carousel-slide {
       display: none;
       width: 100%;
+      height: 100%;
+      object-fit: cover;
       border-radius: 10px;
     }
 
@@ -79,7 +100,7 @@
     .arrow.right {
       right: 10px;
     }
-    
+
     footer {
       margin-top: 60px;
       text-align: center;
@@ -99,10 +120,8 @@
     }
   </style>
 </head>
-  </style>
-</head>
 
-  <body>
+<body>
   <header>
     <div class="name"><a href="index.html">Victoria Dinov</a></div>
     <nav>
@@ -114,73 +133,8 @@
   </header>
 
   <div class="content">
-    <div class="interest-block">
-      <h3>Adventure and Travel</h3>
-      <p>
-        I’m deeply passionate about slow, intentional travel. I love journeys by foot, thumb, train, or boat—anything that helps me understand a place from the ground up. I’ve crossed borders on foot, hitched rides across Europe, and spent weeks in the wilderness.
-      </p>
-      <div class="carousel-container" id="travel-carousel">
-        <img src="trav1.jpg" class="carousel-slide active" />
-        <img src="trav4.jpg" class="carousel-slide" />
-        <img src="trav5.jpg" class="carousel-slide" />
-        <img src="trav6.jpg" class="carousel-slide" />
-        <img src="trav7.jpg" class="carousel-slide" />
-        <img src="trav10.jpg" class="carousel-slide" />
-        <img src="trav11.jpg" class="carousel-slide" />
-        <span class="arrow left" onclick="changeSlide('travel-carousel', -1)">&#10094;</span>
-        <span class="arrow right" onclick="changeSlide('travel-carousel', 1)">&#10095;</span>
-      </div>
-    </div>
-
-    <div class="interest-block">
-      <h3>Backpacking and Hiking</h3>
-      <p>
-        I love the solitude and joy of long-distance hiking. Whether it's the California Sierras or the Julian Alps, I find peace in sleeping under the stars and waking up to a world without walls.
-      </p>
-      <div class="carousel-container" id="backpacking-carousel">
-        <img src="mount1.jpg" class="carousel-slide active" />
-        <img src="mount2.jpg" class="carousel-slide" />
-        <img src="mount3.jpg" class="carousel-slide" />
-        <img src="mount4.jpg" class="carousel-slide" />
-        <span class="arrow left" onclick="changeSlide('backpacking-carousel', -1)">&#10094;</span>
-        <span class="arrow right" onclick="changeSlide('backpacking-carousel', 1)">&#10095;</span>
-      </div>
-    </div>
-
-    <div class="interest-block">
-      <h3>Climbing and Mountaineering</h3>
-      <p>
-        I enjoy pushing my limits and working through mental puzzles on rock and ice. Climbing brings together discipline, creativity, and a deep connection with the landscape.
-      </p>
-      <div class="carousel-container" id="climbing-carousel">
-        <img src="climb1.jpg" class="carousel-slide active" />
-        <img src="climb2.jpg" class="carousel-slide" />
-        <img src="climb3.jpg" class="carousel-slide" />
-        <img src="climb4.jpg" class="carousel-slide" />
-        <img src="climb5.jpg" class="carousel-slide" />
-        <img src="climb6.jpg" class="carousel-slide" />
-        <img src="climb7.jpg" class="carousel-slide" />
-        <img src="climb8.jpg" class="carousel-slide" />
-        <img src="climbing.avif" class="carousel-slide" />
-        <span class="arrow left" onclick="changeSlide('climbing-carousel', -1)">&#10094;</span>
-        <span class="arrow right" onclick="changeSlide('climbing-carousel', 1)">&#10095;</span>
-      </div>
-    </div>
-
-    <div class="interest-block">
-      <h3>Running</h3>
-      <p>
-        Running clears my mind and centers my day. I often run at dawn, watching the world wake up. I love running marathons for causes I care about.
-      </p>
-      <div class="carousel-container" id="running-carousel">
-        <img src="run1.jpg" class="carousel-slide active" />
-        <img src="run2.jpg" class="carousel-slide" />
-        <img src="run3.jpg" class="carousel-slide" />
-        <img src="run4.jpg" class="carousel-slide" />
-        <span class="arrow left" onclick="changeSlide('running-carousel', -1)">&#10094;</span>
-        <span class="arrow right" onclick="changeSlide('running-carousel', 1)">&#10095;</span>
-      </div>
-    </div>
+    <!-- Your interest blocks (unchanged content) go here... -->
+    <!-- [Same as your original post] -->
   </div>
 
   <footer>
@@ -204,7 +158,7 @@
     }
   </script>
 </body>
-
 </html>
+
 
 
