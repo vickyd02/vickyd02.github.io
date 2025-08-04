@@ -1,75 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Personal Interests - Victoria Dinov</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Interests</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
     body {
-      font-family: 'Helvetica Neue', sans-serif;
-      background-color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
       color: #333;
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 0 20px;
     }
 
     header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-bottom: 10px;
-      font-size: 20px;
+      background-color: #ffffff;
+      padding: 1em 2em;
+      border-bottom: 2px solid #eee;
     }
 
-    .name {
-      font-size: 20px;
-      font-weight: bold;
-      text-decoration: none;
-      color: black;
+    header h1 {
+      margin: 0;
+      font-size: 1.8em;
     }
 
-    nav a {
-      margin-left: 20px;
-      text-decoration: none;
-      color: #007acc;
-      font-weight: bold;
-      font-size: 20px;
+    .content {
+      max-width: 900px;
+      margin: 2em auto;
+      padding: 0 1em;
     }
 
-    nav a:hover {
-      text-decoration: underline;
+    .interest-block {
+      margin-bottom: 3em;
     }
 
-    hr {
-      border: none;
-      border-top: 1px solid #ccc;
-      margin: 20px 0;
-    }
-
-    h2 {
-      font-size: 1.5em;
-      margin-top: 40px;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 5px;
-    }
-
-    p {
-      line-height: 1.6;
+    .interest-block h3 {
+      color: #004080;
+      margin-bottom: 0.5em;
     }
 
     .carousel-container {
       position: relative;
       max-width: 100%;
-      margin-top: 10px;
-      margin-bottom: 30px;
+      overflow: hidden;
+      margin-top: 1em;
     }
 
     .carousel-slide {
       display: none;
       width: 100%;
-      height: auto;
       border-radius: 10px;
     }
 
@@ -81,13 +63,13 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
+      background-color: rgba(0, 0, 255, 0.3);
+      color: white;
       font-size: 2em;
-      color: #007acc;
-      background-color: rgba(255, 255, 255, 0.8);
-      border-radius: 50%;
-      padding: 5px 10px;
+      padding: 0.2em 0.5em;
       cursor: pointer;
-      user-select: none;
+      border-radius: 5px;
+      z-index: 10;
     }
 
     .arrow.left {
@@ -98,93 +80,59 @@
       right: 10px;
     }
 
-    section {
-      margin: 40px 0;
-    }
-
-    .section-title {
-      font-size: 1.8em;
-      margin-bottom: 20px;
-      font-weight: bold;
-      color: #007acc;
-    }
-
-    .interest-block {
-      margin-bottom: 30px;
-    }
-
-    .interest-block h3 {
-      font-size: 1.3em;
-      margin-bottom: 10px;
-      color: #333;
-    }
-
-    .interest-block p {
-      font-size: 1.05em;
-      line-height: 1.6;
-      text-align: justify;
-    }
-
     footer {
-      border-top: 1px solid #ccc;
-      margin-top: 40px;
-      padding-top: 20px;
+      background-color: #f2f2f2;
       text-align: center;
+      padding: 20px;
+      margin-top: 50px;
     }
 
     .social-icons a {
-      margin: 0 12px;
-      color: #007acc;
-      font-size: 1.3em;
-      text-decoration: none;
-    }
-
-    .social-icons a:hover {
-      color: #005f99;
+      color: #007bff;
+      font-size: 1.5em;
+      margin: 0 10px;
     }
   </style>
 </head>
-<body>
 
+<body>
   <header>
-    <a href="index.html" class="name">Victoria Dinov</a>
-    <nav>
-      <a href="publications.html">Publications</a>
-      <a href="cv.html">CV</a>
-      <a href="research.html">Research</a>
-      <a href="personal_interests.html">Personal Interests</a>
-    </nav>
+    <h1>Personal Interests</h1>
   </header>
 
-  <hr />
-
-  <section>
-    <div class="section-title">Personal Interests</div>
-
+  <div class="content">
     <div class="interest-block">
       <h3>Adventure and Travel</h3>
       <p>
-        I’m deeply passionate about slow, intentional travel. Last year, I solo travelled in South America for six months, visiting
-        eight countries (Argentina, Uruguay, Brazil, Chile, Bolivia, Peru, Ecuador, and Colombia). During this time, I perfect
-        my Spanish language skills and had an opportunity to work for nonprofits in the region. I have goals to continue to 
-        travel through Latin America and visit Southeast Asia and East Africa!
+        I’m deeply passionate about slow, intentional travel. I love journeys by foot, thumb, train, or boat—anything that helps me understand a place from the ground up. I’ve crossed borders on foot, hitched rides across Europe, and spent weeks in the wilderness.
       </p>
-      <div class="carousel-container" id="climbing-carousel">
-        <img src="climb1.jpg" class="carousel-slide active" />
-        <img src="climb2.jpg" class="carousel-slide" />
-        <img src="climb3.jpg" class="carousel-slide" />
-        <span class="arrow left" onclick="changeSlide('climbing-carousel', -1)">&#10094;</span>
-        <span class="arrow right" onclick="changeSlide('climbing-carousel', 1)">&#10095;</span>
+      <div class="carousel-container" id="travel-carousel">
+        <img src="travel1.jpg" class="carousel-slide active" />
+        <img src="travel2.jpg" class="carousel-slide" />
+        <img src="travel3.jpg" class="carousel-slide" />
+        <span class="arrow left" onclick="changeSlide('travel-carousel', -1)">&#10094;</span>
+        <span class="arrow right" onclick="changeSlide('travel-carousel', 1)">&#10095;</span>
       </div>
     </div>
 
     <div class="interest-block">
-      <h3>Climbing and Backpacking</h3>
+      <h3>Backpacking and Hiking</h3>
       <p>
-        I got into climbing and backpacking during college and have done some incredible things! I have backpacked Cordillera Huayhuash
-        in Peru, O Circuit in Patagonia, Huemul Circuit in El Chalten, Quilotoa Loop in Ecuador, and many trips in the Sierras in the US!
-        I have climbed mainly in the Eastern Sierras and Shenandoah area. I am excited to keep exploring my climbing and backpacking skills
-        and getting more into mountaineering!
+        I love the solitude and joy of long-distance hiking. Whether it's the California Sierras or the Julian Alps, I find peace in sleeping under the stars and waking up to a world without walls.
+      </p>
+      <div class="carousel-container" id="backpacking-carousel">
+        <img src="hike1.jpg" class="carousel-slide active" />
+        <img src="hike2.jpg" class="carousel-slide" />
+        <img src="hike3.jpg" class="carousel-slide" />
+        <span class="arrow left" onclick="changeSlide('backpacking-carousel', -1)">&#10094;</span>
+        <span class="arrow right" onclick="changeSlide('backpacking-carousel', 1)">&#10095;</span>
+      </div>
+    </div>
+
+    <div class="interest-block">
+      <h3>Climbing and Mountaineering</h3>
+      <p>
+        I enjoy pushing my limits and working through mental puzzles on rock and ice. Climbing brings together discipline, creativity, and a deep connection with the landscape.
       </p>
       <div class="carousel-container" id="climbing-carousel">
         <img src="climb1.jpg" class="carousel-slide active" />
@@ -198,29 +146,17 @@
     <div class="interest-block">
       <h3>Running</h3>
       <p>
-        I have been a runner from a young age. It has been a very important part of my life and has led me to running half and full marathons, Boston qualifying during my first marathon. 
-        I am excited to see where my running takes me as I expand to ultra and trail running!
+        Running clears my mind and centers my day. I often run at dawn, watching the world wake up. I love running marathons for causes I care about.
       </p>
-      <div class="carousel-container" id="climbing-carousel">
-        <img src="climb1.jpg" class="carousel-slide active" />
-        <img src="climb2.jpg" class="carousel-slide" />
-        <img src="climb3.jpg" class="carousel-slide" />
-        <span class="arrow left" onclick="changeSlide('climbing-carousel', -1)">&#10094;</span>
-        <span class="arrow right" onclick="changeSlide('climbing-carousel', 1)">&#10095;</span>
+      <div class="carousel-container" id="running-carousel">
+        <img src="run1.jpg" class="carousel-slide active" />
+        <img src="run2.jpg" class="carousel-slide" />
+        <img src="run3.jpg" class="carousel-slide" />
+        <span class="arrow left" onclick="changeSlide('running-carousel', -1)">&#10094;</span>
+        <span class="arrow right" onclick="changeSlide('running-carousel', 1)">&#10095;</span>
       </div>
     </div>
-
-    <div class="interest-block">
-      <h3>Writing & Storytelling</h3>
-      <p>
-        I run a Substack called <i>Mad to Live</i>, where I write about travel, philosophy, and the quiet drama of following a nonlinear path. I write to capture the moments that get overlooked, and to make sense of the choices that shape who we become.
-      </p>
-      <p>
-        I also run a Medium account in which I write about the environmental policy, energy systems, and climate change more generally.
-      </p>
-    </div>
-
-  </section>
+  </div>
 
   <footer>
     <div class="social-icons">
@@ -232,6 +168,18 @@
     <p style="margin-top: 10px; font-size: 0.9em;">© 2025 Victoria Dinov</p>
   </footer>
 
+  <script>
+    function changeSlide(carouselId, direction) {
+      const container = document.getElementById(carouselId);
+      const slides = container.querySelectorAll('.carousel-slide');
+      let currentIndex = Array.from(slides).findIndex(slide => slide.classList.contains('active'));
+      slides[currentIndex].classList.remove('active');
+      let newIndex = (currentIndex + direction + slides.length) % slides.length;
+      slides[newIndex].classList.add('active');
+    }
+  </script>
 </body>
+
 </html>
+
 
