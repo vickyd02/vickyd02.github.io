@@ -17,10 +17,18 @@
 
     header {
       display: flex;
-      justify-content: flex-end;
+      justify-content: space-between;
       align-items: center;
       padding-bottom: 10px;
       border-bottom: 1px solid #ccc;
+    }
+
+    .name a {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: black;
+      text-decoration: none;
+      margin-right: auto;
     }
 
     nav a {
@@ -111,13 +119,15 @@
 <body>
 
   <header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="cv.html">CV</a>
-      <a href="research.html">Research</a>
-      <a href="personal-interests.html">Personal Interests</a>
-    </nav>
-  </header>
+  <div class="name"><a href="index.html">Victoria Dinov</a></div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="cv.html">CV</a>
+    <a href="research.html">Research</a>
+    <a href="personal-interests.html">Personal Interests</a>
+  </nav>
+</header>
+
 
   <main>
     <h2>Publications</h2>
