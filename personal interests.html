@@ -17,12 +17,18 @@
     }
     
     header {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      padding-bottom: 10px;
-      border-bottom: 1px solid #ccc;
-    }
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 1em 2em;
+  border-bottom: 1px solid #ccc;
+}
+    .name a {
+  text-decoration: none;
+  font-size: 1.3em;
+  color: #000;    
+  font-weight: bold;
+}
 
     nav a {
       margin-left: 20px;
@@ -116,14 +122,15 @@
 
 <body>
   <header>
-    <div class="name"><a href="index.html">Victoria Dinov</a></div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="publications.html">Publications</a>
-      <a href="cv.html">CV</a>
-      <a href="research.html">Research</a>
-    </nav>
-  </header>
+  <div class="name"><a href="index.html">Victoria Dinov</a></div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="publications.html">Publications</a>
+    <a href="cv.html">CV</a>
+    <a href="research.html">Research</a>
+  </nav>
+</header>
+  
 
   <div class="content">
     <div class="interest-block">
