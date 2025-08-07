@@ -54,7 +54,7 @@
     .carousel-container {
       position: relative;
       width: 100%;
-      height: 600px; /* increased height */
+      height: 600px;
       overflow: hidden;
       margin-top: 1em;
       border-radius: 10px;
@@ -222,14 +222,16 @@
     </footer>
 
     <script>
-      function changeSlide(carouselId, direction) {
-        const container = document.getElementById(carouselId);
-        const slides = container.querySelectorAll('.carousel-slide');
-        let currentIndex = Array.from(slides).findIndex(slide => slide.classList.contains('active'));
-        slides[currentIndex].classList.remove('active');
-        let newIndex = (currentIndex + direction + slides.length) % slides.length;
-        slides[newIndex].classList.add('active');
-      }
+      document.addEventListener("DOMContentLoaded", function () {
+        window.changeSlide = function(carouselId, direction) {
+          const container = document.getElementById(carouselId);
+          const slides = container.querySelectorAll('.carousel-slide');
+          let currentIndex = Array.from(slides).findIndex(slide => slide.classList.contains('active'));
+          slides[currentIndex].classList.remove('active');
+          let newIndex = (currentIndex + direction + slides.length) % slides.length;
+          slides[newIndex].classList.add('active');
+        };
+      });
     </script>
 </body>
 </html>
