@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Personal Interests</title>
-
+  <link rel="stylesheet" href="styles.css" />
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -13,7 +13,8 @@
     referrerpolicy="no-referrer"
   />
 
-  body {
+  <style>
+    body {
       font-family: 'Helvetica Neue', sans-serif;
       background-color: #fff;
       color: #333;
@@ -67,7 +68,7 @@
     .carousel-container {
       position: relative;
       width: 100%;
-      aspect-ratio: 16 / 9;
+      height: 600px; /* increased height */
       overflow: hidden;
       margin-top: 1em;
       border-radius: 10px;
@@ -138,14 +139,10 @@
   </header>
 
   <div class="content">
-
     <div class="interest-block">
       <h3>Adventure and Travel</h3>
       <p>
-        I’m deeply passionate about slow, intentional travel. Last year, I solo travelled in South America for six months, visiting
-        eight countries (Argentina, Uruguay, Brazil, Chile, Bolivia, Peru, Ecuador, and Colombia). During this time, I perfect
-        my Spanish language skills and had an opportunity to work for nonprofits in the region. I have goals to continue to 
-        travel through Latin America and visit Southeast Asia and East Africa!
+        I’m deeply passionate about slow, intentional travel. I love journeys by foot, thumb, train, or boat—anything that helps me understand a place from the ground up. I’ve crossed borders on foot, hitched rides across Europe, and spent weeks in the wilderness.
       </p>
       <div class="carousel-container" id="travel-carousel">
         <img src="trav1.jpg" class="carousel-slide active" />
@@ -163,13 +160,11 @@
     <div class="interest-block">
       <h3>Backpacking and Hiking</h3>
       <p>
-        I got into climbing and backpacking during college and have done some incredible things! I have backpacked Cordillera Huayhuash
-        in Peru, O Circuit in Patagonia, Huemul Circuit in El Chalten, Quilotoa Loop in Ecuador, and many trips in the Sierras in the US!
-        I have climbed mainly in the Eastern Sierras and Shenandoah area. I am excited to keep exploring my climbing and backpacking skills
-        and getting more into mountaineering!
+        I love the solitude and joy of long-distance hiking. Whether it's the California Sierras or the Julian Alps, I find peace in sleeping under the stars and waking up to a world without walls.
       </p>
       <div class="carousel-container" id="backpacking-carousel">
         <img src="mount1.jpg" class="carousel-slide active" />
+        <img src="mount2.jpg" class="carousel-slide" />
         <img src="mount3.jpg" class="carousel-slide" />
         <img src="mount4.jpg" class="carousel-slide" />
         <span class="arrow left" onclick="changeSlide('backpacking-carousel', -1)">&#10094;</span>
@@ -191,6 +186,7 @@
         <img src="climb6.jpg" class="carousel-slide" />
         <img src="climb7.jpg" class="carousel-slide" />
         <img src="climb8.jpg" class="carousel-slide" />
+        <img src="climbing.avif" class="carousel-slide" />
         <span class="arrow left" onclick="changeSlide('climbing-carousel', -1)">&#10094;</span>
         <span class="arrow right" onclick="changeSlide('climbing-carousel', 1)">&#10095;</span>
       </div>
@@ -199,53 +195,41 @@
     <div class="interest-block">
       <h3>Running</h3>
       <p>
-        I have been a runner from a young age. It has been a very important part of my life and has led me to running half and full marathons, Boston qualifying during my first marathon. 
-        I am excited to see where my running takes me as I expand to ultra and trail running!
+        Running clears my mind and centers my day. I often run at dawn, watching the world wake up. I love running marathons for causes I care about.
       </p>
       <div class="carousel-container" id="running-carousel">
-        <img src="run.jpg" class="carousel-slide active" />
+        <img src="run1.jpg" class="carousel-slide active" />
+        <img src="run2.jpg" class="carousel-slide" />
         <img src="run3.jpg" class="carousel-slide" />
         <img src="run4.jpg" class="carousel-slide" />
-        <img src="run5.jpg" class="carousel-slide" />
         <span class="arrow left" onclick="changeSlide('running-carousel', -1)">&#10094;</span>
         <span class="arrow right" onclick="changeSlide('running-carousel', 1)">&#10095;</span>
       </div>
     </div>
 
-    <div class="interest-block">
-      <h3>Writing & Storytelling</h3>
-      <p>
-        I run a Substack called <i>Mad to Live</i>, where I write about travel, philosophy, and the quiet drama of following a nonlinear path. I write to capture the moments that get overlooked, and to make sense of the choices that shape who we become.
-      </p>
-      <p>
-        I also run a Medium account in which I write about the environmental policy, energy systems, and climate change more generally.
-      </p>
-    </div>
+    <footer>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/victoria-dinov-8272231a6/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:vdinov@stanford.edu"><i class="fas fa-envelope"></i></a>
+        <a href="https://scholar.google.com/citations?user=4-LxwA0AAAAJ&hl=en"><i class="fas fa-graduation-cap"></i></a>
+        <a href="https://github.com/vickyd02" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+      <p style="margin-top: 10px; font-size: 0.9em;">© 2025 Victoria Dinov</p>
+    </footer>
 
-  </div>
-
-  <footer>
-    <div class="social-icons">
-      <a href="https://www.linkedin.com/in/victoria-dinov-8272231a6/" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="mailto:vdinov@stanford.edu"><i class="fas fa-envelope"></i></a>
-      <a href="https://scholar.google.com/citations?user=4-LxwA0AAAAJ&hl=en"><i class="fas fa-graduation-cap"></i></a>
-      <a href="https://github.com/vickyd02" target="_blank"><i class="fab fa-github"></i></a>
-    </div>
-    <p style="margin-top: 10px; font-size: 0.9em;">© 2025 Victoria Dinov</p>
-  </footer>
-
-  <script>
-    function changeSlide(carouselId, direction) {
-      const container = document.getElementById(carouselId);
-      const slides = container.querySelectorAll('.carousel-slide');
-      let currentIndex = Array.from(slides).findIndex(slide => slide.classList.contains('active'));
-      slides[currentIndex].classList.remove('active');
-      let newIndex = (currentIndex + direction + slides.length) % slides.length;
-      slides[newIndex].classList.add('active');
-    }
-  </script>
+    <script>
+      function changeSlide(carouselId, direction) {
+        const container = document.getElementById(carouselId);
+        const slides = container.querySelectorAll('.carousel-slide');
+        let currentIndex = Array.from(slides).findIndex(slide => slide.classList.contains('active'));
+        slides[currentIndex].classList.remove('active');
+        let newIndex = (currentIndex + direction + slides.length) % slides.length;
+        slides[newIndex].classList.add('active');
+      }
+    </script>
 </body>
 </html>
+
 
 
 
