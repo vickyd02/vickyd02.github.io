@@ -2,18 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Personal Interests</title>
-
-  <!-- Updated Font Awesome (v6.5.0) -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    integrity="sha512-uMu0K8QH4oWXEB9hMvG9FodKZ9I92WlmZh6gG4Tu8oTcXKZHXztYyKyRUEIqGnYaQre5eGpYHkGeYlZ+F06vfQ=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Publications - Victoria Dinov</title>
   <style>
     body {
       font-family: 'Helvetica Neue', sans-serif;
@@ -26,111 +16,81 @@
 
     header {
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-end;
       align-items: center;
-      background-color: #ffffff;
-      padding: 1em 2em;
-      border-bottom: 2px solid #eee;
-    }
-
-    header .name a {
-      text-decoration: none;
-      font-size: 1.3em;
-      color: #000;
-      font-weight: bold;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #ccc;
     }
 
     nav a {
       margin-left: 20px;
       text-decoration: none;
       color: #007acc;
-      font-weight: 500;
+      font-weight: bold;
+      font-size: 1em;
     }
 
     nav a:hover {
       text-decoration: underline;
     }
 
-    .content {
-      max-width: 900px;
-      margin: 2em auto;
-      padding: 0 1em;
+    main {
+      margin-top: 40px;
     }
 
-    .interest-block {
-      margin-bottom: 3em;
+    h2 {
+      font-size: 1.8em;
+      margin-bottom: 30px;
     }
 
-    .interest-block h3 {
-      color: #004080;
-      margin-bottom: 0.5em;
+    .publication {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      margin-bottom: 30px;
     }
 
-    .carousel-container {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      overflow: hidden;
-      margin-top: 1em;
-      border-radius: 10px;
-    }
-
-    .carousel-slide {
-      display: none;
-      width: 100%;
-      height: 100%;
+    .publication img {
+      width: 100px;
+      height: 100px;
       object-fit: cover;
-      border-radius: 10px;
+      border-radius: 8px;
+      flex-shrink: 0;
     }
 
-    .carousel-slide.active {
-      display: block;
+    .pub-details {
+      flex: 1;
     }
 
-    .arrow {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: rgba(0, 0, 255, 0.3);
-      color: white;
-      font-size: 2em;
-      padding: 0.2em 0.5em;
-      cursor: pointer;
-      border-radius: 5px;
-      z-index: 10;
-    }
-
-    .arrow.left {
-      left: 10px;
-    }
-
-    .arrow.right {
-      right: 10px;
-    }
-
-    footer {
-      margin-top: 60px;
-      text-align: center;
-      padding-top: 20px;
-      border-top: 1px solid #ccc;
-    }
-
-    .social-icons a {
-      margin: 0 10px;
+    .pub-details a {
       color: #007acc;
-      font-size: 1.4em;
-      transition: color 0.3s ease;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1.1em;
+      display: block;
+      margin-bottom: 4px;
     }
 
-    .social-icons a:hover {
-      color: #0056b3;
+    .pub-details a:hover {
+      text-decoration: underline;
+    }
+
+    .publication-title {
+      font-style: italic;
+      font-size: 0.95em;
+      margin: 2px 0;
+    }
+
+    .author, .year {
+      font-size: 0.9em;
+      color: #666;
+      margin: 2px 0;
     }
   </style>
 </head>
-
 <body>
+
   <header>
-    <div class="name"><a href="index.html">Victoria Dinov</a></div>
     <nav>
       <a href="index.html">Home</a>
       <a href="cv.html">CV</a>
@@ -143,9 +103,9 @@
     <h2>Publications</h2>
 
     <div class="publication">
-      <img src="BCCE.jpeg" alt="Publication Thumbnail">
+      <img src="thumbnail1.jpg" alt="Publication Thumbnail">
       <div class="pub-details">
-        <a href="https://www.law.berkeley.edu/wp-content/uploads/2021/11/Annual-Report-2021-1-1.pdf" target="_blank">UC Berkeley Center on Comparative Equality and Anti-Discrimination Law Annual Report</a>
+        <a href="https://www.law.berkeley.edu/wp-content/uploads/2021/11/Annual-Report-2021-1-1.pdf">UC Berkeley Center on Comparative Equality and Anti-Discrimination Law Annual Report</a>
         <div class="publication-title">UC Berkeley Center on Comparative Equality and Anti-Discrimination Law</div>
         <div class="author">David Oppenheimer, Victoria Dinov et al.</div>
         <div class="year">2021</div>
@@ -153,7 +113,7 @@
     </div>
 
     <div class="publication">
-      <img src="Vote.png" alt="Publication Thumbnail">
+      <img src="thumbnail1.jpg" alt="Publication Thumbnail">
       <div class="pub-details">
         <a href="https://www.sandiegouniontribune.com/2020/06/04/guest-editorial-who-runs-the-world-voters/" target="_blank">Who Runs the World? Voters</a>
         <div class="publication-title">San Diego Union Tribune</div>
@@ -163,19 +123,19 @@
     </div>
 
     <div class="publication">
-      <img src="victoria_jpg.jpeg" alt="Publication Thumbnail">
+      <img src="thumbnail1.jpg" alt="Publication Thumbnail">
       <div class="pub-details">
         <a href="https://spectrumnews1.com/ca/southern-california/politics/2020/10/13/proposition-18-asks-voters-to-decide-if-some-17-year-olds-should-vote" target="_blank">Proposition 18: Should Some 17-Year-Olds Vote?</a>
         <div class="publication-title">Spectrum News 1</div>
-        <div class="author">Daniela Pardo, Victoria Dinov</div>
+        <div class="author">Daniel Pardo</div>
         <div class="year">2020</div>
       </div>
     </div>
 
     <div class="publication">
-      <img src="sequoias.png" alt="Publication Thumbnail">
+      <img src="thumbnail1.jpg" alt="Publication Thumbnail">
       <div class="pub-details">
-        <a href="https://sophzw.wixsite.com/website/post/protecting-old-friends" target="_blank">Protecting Old Friends</a>
+        <a href="https://sophzw.wixsite.com/website/post/protecting-old-friends">Protecting Old Friends</a>
         <div class="publication-title">Project We</div>
         <div class="author">Victoria Dinov</div>
         <div class="year">2020</div>
@@ -183,26 +143,17 @@
     </div>
 
     <div class="publication">
-      <img src="wildfire.png" alt="Publication Thumbnail">
+      <img src="thumbnail1.jpg" alt="Publication Thumbnail">
       <div class="pub-details">
-        <a href="https://www.hercampus.com/school/uc-berkeley/wildfire-survivor-climate-activist-personal-narrative/">From Wilfire Survivor to Climate Activist: A Personal Narrative</a>
+        <a href="https://www.hercampus.com/school/uc-berkeley/wildfire-survivor-climate-activist-personal-narrative/">From Wildfire Survivor to Climate Activist</a>
         <div class="publication-title">Her Campus</div>
         <div class="author">Victoria Dinov</div>
         <div class="year">2020</div>
       </div>
     </div>
-
-    <footer>
-    <div class="social-icons">
-      <a href="https://www.linkedin.com/in/victoria-dinov-8272231a6/" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="mailto:vdinov@stanford.edu"><i class="fas fa-envelope"></i></a>
-      <a href="https://scholar.google.com/citations?user=4-LxwA0AAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap"></i></a>
-      <a href="https://github.com/vickyd02" target="_blank"><i class="fab fa-github"></i></a>
-    </div>
-    <p style="margin-top: 10px; font-size: 0.9em;">© 2025 Victoria Dinov</p>
-  </footer>
-
   </main>
+
 </body>
 </html>
+
 
